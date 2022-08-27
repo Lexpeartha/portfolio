@@ -1,0 +1,39 @@
+.scale {
+  &-enter-active {
+    @apply transition duration-200 ease-in-out;
+  }
+
+  &-leave-active {
+    @apply transition duration-150 ease-out;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    @apply scale-75 transform opacity-0;
+  }
+
+  &-enter-to,
+  &-leave-from {
+    @apply scale-100 transform opacity-100;
+  }
+}
+
+.slide {
+  &-enter-active {
+    @apply transition duration-300 ease-in-out;
+  }
+
+  &-leave-active {
+    @apply transition duration-200 ease-out;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    @apply translate-x-5 opacity-0;
+  }
+
+  &-enter-to,
+  &-leave-from {
+    @apply translate-x-0 opacity-100;
+  }
+}
