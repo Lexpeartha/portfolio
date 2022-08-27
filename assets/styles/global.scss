@@ -68,6 +68,16 @@ $opacity-light: 18%;
 }
 
 /*-- GLOBAL STYLES --*/
+.prose {
+  h2 a,
+  h3 a {
+    @apply no-underline;
+    &:hover {
+      @apply underline decoration-wavy decoration-0 decoration-secondary-600 dark:decoration-secondary-300;
+    }
+  }
+}
+
 .light {
   body {
     @include background-pattern(url('/images/pattern-light.png'), false);

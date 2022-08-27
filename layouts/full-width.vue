@@ -9,14 +9,3 @@
     </main>
   </div>
 </template>
-
-<style lang="scss">
-/* Customize headers to remove default underline */
-.prose h2 a,
-.prose h3 a {
-  @apply no-underline;
-  &:hover {
-    @apply underline decoration-wavy decoration-0 decoration-neutral-600 dark:decoration-neutral-300;
-  }
-}
-</style>
