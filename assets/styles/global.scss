@@ -1,3 +1,7 @@
+/*-- VARIABLES --*/
+$opacity-dark: 12%;
+$opacity-light: 18%;
+
 /*-- TRANSITIONS & ANIMATIONS --*/
 .scale {
   &-enter-active {
@@ -40,10 +44,14 @@
 }
 
 /*-- MIXINS --*/
-@mixin background-pattern($url, $opacity: 15%) {
+@mixin background-pattern($url, $isDark: false) {
   &::after {
     content: '';
-    opacity: $opacity;
+    @if $isDark {
+      opacity: $opacity-dark;
+    } @else {
+      opacity: $opacity-light;
+    }
     display: block;
     height: 100vh;
     width: 100vw;
@@ -54,18 +62,20 @@
     z-index: -10;
     background-image: $url;
     background-repeat: repeat;
+    animation-name: fade-in;
+    animation-duration: 1s;
   }
 }
 
 /*-- GLOBAL STYLES --*/
-.dark {
+.light {
   body {
-    @include background-pattern(url('/images/pattern-dark.png'), 15%);
+    @include background-pattern(url('/images/pattern-light.png'), false);
   }
 }
 
-.light {
+.dark {
   body {
-    @include background-pattern(url('/images/pattern-light.png'), 20%);
+    @include background-pattern(url('/images/pattern-dark.png'), true);
   }
 }
