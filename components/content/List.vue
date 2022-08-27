@@ -5,7 +5,7 @@ const { flatUnwrap } = useUnwrap()
 defineProps({
   icon: {
     type: String,
-    default: 'ph:check-circle-duotone'
+    default: 'ion:checkbox'
   }
 })
 </script>
