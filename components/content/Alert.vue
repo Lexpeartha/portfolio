@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="p-4 rounded-md dark:bg-amber-150 bg-amber-50">
+  <div class="p-4 rounded-md dark:bg-amber-100 bg-amber-50">
     <div class="flex">
       <div v-if="icon" class="flex-shrink-0 mr-3">
         <Icon class="w-5 h-5 text-yellow-600" aria-hidden="true" :name="icon" />
