@@ -3,15 +3,22 @@ const props = defineProps<{
     audioSrc: string
 }>()
 
-const onClick = async () => {
-  const audio = new Audio(props.audioSrc)
+const audio = ref<HTMLAudioElement>()
 
-  await audio.play()
+const { playing } = useMediaControls(audio, { src: props.audioSrc })
+
+const onClick = () => {
+  if (playing.value) { return }
+
+  playing.value = true
 }
 </script>
 
 <template>
-  <button @click="onClick">
-    <slot />
-  </button>
+  <div>
+    <button class="inline" @click="onClick">
+      <Icon class="p-0 h-4 w-4 inline" name="ion:megaphone" />
+    </button>
+    <audio ref="audio" class="hidden" />
+  </div>
 </template>
