@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 const { navigation } = useContent()
 const appConfig = useAppConfig() as any
+
+const openInNewWindow = (url: string) => {
+  window.open(url, '_blank')
+}
 </script>
 
 <template>
@@ -21,27 +25,17 @@ const appConfig = useAppConfig() as any
     <div class="flex items-center justify-center gap-x-1.5 transition text-primary-500">
       <AppButton
         v-if="appConfig.socials?.twitter"
+        class="flex items-center justify-center"
+        @click="openInNewWindow(`https://twitter.com/${appConfig.socials?.twitter}`)"
       >
-        <NuxtLink
-          :to="`https://twitter.com/${appConfig.socials?.twitter}`"
-          target="_blank"
-          class="flex items-center justify-center"
-          title="Twitter"
-        >
-          <Icon name="ion:logo-twitter" class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5" />
-        </NuxtLink>
+        <Icon name="ion:logo-twitter" class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5" />
       </AppButton>
       <AppButton
         v-if="appConfig.socials?.github"
+        class="flex items-center justify-center"
+        @click="openInNewWindow(`https://github.com/${appConfig.socials?.github}`)"
       >
-        <NuxtLink
-          :to="`https://github.com/${appConfig.socials?.github}`"
-          target="_blank"
-          class="flex items-center justify-center"
-          title="GitHub"
-        >
-          <Icon name="ion:logo-github" class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5" />
-        </NuxtLink>
+        <Icon name="ion:logo-github" class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5" />
       </AppButton>
       <ColorModeSwitch class="dark:text-primary-100 hover:text-primary-700 dark:hover:text-primary-300" />
     </div>
