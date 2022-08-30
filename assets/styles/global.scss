@@ -76,6 +76,14 @@ $opacity-light: 20%;
       @apply underline decoration-wavy decoration-0 decoration-secondary-600 dark:decoration-secondary-300;
     }
   }
+
+  code {
+    &::before,
+    &::after {
+      content: ""
+    }
+  }
+  
 }
 
 .light {
