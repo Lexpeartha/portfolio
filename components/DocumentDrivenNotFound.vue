@@ -1,0 +1,22 @@
+<template>
+  <div>
+    <h1 class="md:text-3xl text-2xl font-semibold">
+      Page you were looking for
+      <span class="text-secondary-600 dark:text-secondary-500">wasn't found</span>
+    </h1>
+    <p>
+      It seems that you got lost... Go back to the homepage, or contact me on
+      <NuxtLink
+        to="https://twitter.com/Lexpeartha"
+        target="_blank"
+        class="text-secondary-600 dark:text-secondary-500"
+      >
+        Twitter
+      </NuxtLink>
+      if you think there should be a page here!
+    </p>
+    <AppButton type="cta" class="px-3 py-1.5" @click="$router.push('/')">
+      Go to the homepage
+    </AppButton>
+  </div>
+</template>
