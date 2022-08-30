@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-    type: 'regular' | 'cta'
+    type?: 'regular' | 'cta'
   }>(), {
   type: 'regular'
 })
