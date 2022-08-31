@@ -3,7 +3,7 @@
     <h1 class="md:text-3xl text-2xl font-semibold">
       <slot>
         Page you were looking for
-        <span class="text-secondary-600 dark:text-secondary-500">wasn't found</span>
+        <span class="highlight">wasn't found</span>
       </slot>
     </h1>
     <p>
@@ -11,7 +11,7 @@
       <NuxtLink
         to="https://twitter.com/Lexpeartha"
         target="_blank"
-        class="text-secondary-600 dark:text-secondary-500"
+        class="highlight"
       >
         Twitter
       </NuxtLink>
