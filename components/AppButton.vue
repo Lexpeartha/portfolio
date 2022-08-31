@@ -6,8 +6,10 @@ const props = withDefaults(defineProps<{
 })
 
 const styleClasses = props.type === 'regular'
+  // Regular button
   ? 'text-white dark:text-primary-800 hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-200 dark:hover:bg-primary-700 dark:focus:ring-primary-700'
-  : 'text-primary-800 bg-secondary-400 dark:bg-secondary-500 focus:outline-none focus:ring-2 focus:ring-secondary-200 dark:hover:bg-secondary-400 hover:bg-secondary-500 dark:focus:ring-secondary-700'
+  // CTA button
+  : 'text-secondary-600 dark:text-secondary-200 bg-secondary-100 dark:bg-secondary-900 focus:outline-none focus:ring-2 focus:ring-secondary-600 dark:hover:bg-secondary-800 dark:focus:bg-secondary-800 hover:bg-secondary-200 focus:bg-secondary-100 dark:focus:ring-secondary-200'
 </script>
 
 <template>
