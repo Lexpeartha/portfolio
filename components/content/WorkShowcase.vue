@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const content = await queryContent('/projects').find()
+const { data: content } = await useAsyncData('all-projects', () => queryContent('/projects').find())
 
 const projectsList: Project[] = []
 
 const { extractProjectFromContent } = useProjectUtils()
 
-for (const project of content) {
+for (const project of content.value) {
   const p = extractProjectFromContent(project)
 
   projectsList.push(p)
@@ -28,15 +28,9 @@ const otherProjects = projectsList.filter(p => p.category === 'other')
   <div>
     <ProjectCategory v-if="appProjects.length" category="apps" :projects="appProjects" />
 
-    <hr>
-
     <ProjectCategory v-if="websiteProjects.length" category="websites" :projects="websiteProjects" />
 
-    <hr>
-
     <ProjectCategory v-if="gameProjects.length" category="games" :projects="gameProjects" />
-
-    <hr>
 
     <ProjectCategory v-if="otherProjects.length" category="other" :projects="otherProjects" />
 

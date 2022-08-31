@@ -11,15 +11,21 @@ codeLink: https://github.com/Lexpeartha/trello-clone
 demoLink: https://trello-clone-4a7bd.web.app
 ---
 
-# Trello clone
+# [Trello clone]{.highlight} (old)
+
+This application is the clone of Trello, made for fun & learning purposes. It uses Vue Options API and Vuex, it is marked as old because I'm working on a new version that will utilize Composition API and Pinia.
 
 ## Technologies used
 
+::list{icon="ion:arrow-right-c"}
 - Vue
 - Vuex
 - TailwindCSS
+::
 
-## Description
+## Description & details
+
+![Thumbnail Trello clone image](/images/projects/trello-clone-old.png){.rounded-lg.outline.outline-secondary-500}
 
 Trello clone is project I was really excited about, mostly because Drag and drop API is very used in modern world of web apps, along with file drop-zones, which are made in the similar way.
 
@@ -29,5 +35,7 @@ I had rough time working with this API, but it was fun nonetheless because I lea
 
 ## Overcame obstacles
 
+::list
 - Wrapping functionality of dragging and dropping both columns and tasks with the same components
 - Changing orders of tasks/columns in exact positions with Vuex
+::
