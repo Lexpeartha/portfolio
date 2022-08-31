@@ -16,7 +16,7 @@ const onClick = () => {
 
 <template>
   <div>
-    <button class="inline" @click="onClick">
+    <button aria-label="Play Audio" class="inline" @click="onClick">
       <Icon class="p-0 h-4 w-4 inline" name="ion:megaphone" />
     </button>
     <audio ref="audio" class="hidden" />

@@ -26,6 +26,7 @@ const openInNewWindow = (url: string) => {
       <AppButton
         v-if="appConfig.socials?.twitter"
         class="flex items-center justify-center"
+        aria-label="Twitter"
         @click="openInNewWindow(`https://twitter.com/${appConfig.socials?.twitter}`)"
       >
         <Icon name="ion:logo-twitter" class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5" />
@@ -33,6 +34,7 @@ const openInNewWindow = (url: string) => {
       <AppButton
         v-if="appConfig.socials?.github"
         class="flex items-center justify-center"
+        aria-label="Github"
         @click="openInNewWindow(`https://github.com/${appConfig.socials?.github}`)"
       >
         <Icon name="ion:logo-github" class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5" />
