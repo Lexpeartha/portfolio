@@ -1,6 +1,6 @@
 ---
 slug: trello-clone-old
-image: /projects/trello-clone.png
+image: /images/projects/trello-clone.png
 title: Trello clone (old)
 creationDate: 2020-11-20
 category: website
@@ -14,6 +14,15 @@ demoLink: https://trello-clone-4a7bd.web.app
 # [Trello clone]{.highlight} (old)
 
 This application is the clone of Trello, made for fun & learning purposes. It uses Vue Options API and Vuex, it is marked as old because I'm working on a new version that will utilize Composition API and Pinia.
+
+::alert
+#title
+Why is project marked as "old"?
+
+#default
+This project is marked as "old" because methods used in building the app (Options API and Mixins) aren't optimal and up-to-date with everything happening in Vue ecosystem. I'm working on a new version that will utilize Composition API and Pinia!
+::
+
 
 ## Technologies used
 
