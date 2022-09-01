@@ -5,7 +5,6 @@ defineProps({
     default: 'ion:warning'
   }
 })
-// text-secondary-600 dark:text-secondary-200 bg-secondary-100 dark:bg-secondary-900
 </script>
 
 <template>
