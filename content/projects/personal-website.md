@@ -30,7 +30,7 @@ Website is created with Vue 3 and Nuxt 3 for SSR. It was made from [Content-Wind
 
 Website uses Nuxt content module with document driven mode, utilizing markdown files for generating pages, instead of usual Vue files.
 
-Everything was styles using TailwindCSS, including typography generated from MD with `@tailwindcss/typography` plugin. Exceptions are minor details and utilities that were added to make the website look better, which are written in SCSS.
+Everything was styled using TailwindCSS, including typography generated from MD with `@tailwindcss/typography` plugin. Exceptions are minor details and utilities that were added to make the website look better, which are written in SCSS.
 
 ## Solved problems
 
