@@ -1,6 +1,6 @@
 ---
 slug: trello-clone-old
-image: /images/projects/trello-clone.png
+image: /images/projects/trello-clone-old.png
 title: Trello clone (old)
 creationDate: 2020-11-20
 category: website
