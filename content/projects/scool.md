@@ -23,11 +23,11 @@ App created for national app competition. It uses Flutter & Firebase, and it cen
 
 ## Description & details
 
-![Thumbnail Scool app image](/images/projects/scool.jpg){.rounded-lg.outline.outline-secondary-500}
+![Thumbnail Scool app image](/images/projects/scool.jpg){.highlight-image}
 
-App created for national app competition, which centers around schooling online. It's made with Flutter & Firebase, and it includes many features modern apps usually use: file storage, chatting, authentication
+App created for national app competition, which centers around schooling online. It's made with Flutter & Firebase, and it includes many features modern apps usually use: file storage, chatting and authentication.
 
-A team of 3 middle school friends (including me) made this app from the ground up: from design and branding all the way to functionalities integrations. The app is very adaptable and contains primarily user-generated content. It has two types of accounts, for teachers and students. Teachers can create classrooms and upload study materials/assignments for their students. Students can enter the classroom either by typing classroom code manually or by scanning a QR code.
+A team of 3 middle school friends (me being one of them) made this app from the ground up: from design and branding all the way to functionality integrations. The app is very adaptable and contains primarily user-generated content. It has two types of accounts, for teachers and students. Teachers can create classrooms and upload study materials/assignments for their students. Students can enter the classroom created by teachers either by typing classroom code manually or by scanning a QR code.
 
 All classrooms have different color palettes generated based on the color teacher selected when creating that class. And, of course, teachers can track and grade students' work (which are attached files they uploaded) and chat with them.
 

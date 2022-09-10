@@ -24,7 +24,7 @@ The very website you're on! I've made it to showcase my projects and skills, and
 
 ## Description & details
 
-![Screenshot of my personal website](/images/projects/personal-website.png){.rounded-lg.outline.outline-secondary-500}
+![Screenshot of my personal website](/images/projects/personal-website.png){.highlight-image}
 
 Website is created with Vue 3 and Nuxt 3 for SSR. It was made from [Content-Wind](https://content-wind.nuxt.dev/){target="_blank"} project template, but was heavily modified to suit my needs.
 

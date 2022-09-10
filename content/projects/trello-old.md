@@ -34,7 +34,7 @@ This project is marked as "old" because methods used in building the app (Option
 
 ## Description & details
 
-![Thumbnail Trello clone image](/images/projects/trello-clone-old.png){.rounded-lg.outline.outline-secondary-500}
+![Thumbnail Trello clone image](/images/projects/trello-clone-old.png){.highlight-image}
 
 Trello clone is project I was really excited about, mostly because Drag and drop API is very used in modern world of web apps, along with file drop-zones, which are made in the similar way.
 

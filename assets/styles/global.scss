@@ -83,10 +83,14 @@ $opacity-light: 26%;
       content: ""
     }
   }
-  
+
   .highlight {
     @apply text-secondary-700 dark:text-secondary-500;
   }
+}
+
+.highlight-image {
+  @apply rounded-lg border border-secondary-700 dark:border-secondary-500;
 }
 
 .light {
