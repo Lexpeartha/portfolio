@@ -17,7 +17,7 @@
       </NuxtLink>
       if you think there should be a page here!
     </p>
-    <AppButton type="cta" class="px-3 py-1.5" @click="$router.push('/')">
+    <AppButton type="cta" @click="$router.push('/')">
       Go to the homepage
     </AppButton>
   </div>
