@@ -1,6 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'full-width'
+  layout: 'full-width',
+  documentDriven: false
 })
 const { params } = useRoute()
 
