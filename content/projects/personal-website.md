@@ -7,7 +7,6 @@ category: website
 type: personal
 description: >
   Website made with Nuxt content module in document driven mode, utilizing markdown files for generating pages, and TailwindCSS for styling.
-codeLink: https://github.com/Lexpeartha/trello-clone
 ---
 
 # [Personal website]{.highlight}
@@ -38,4 +37,9 @@ Everything was styled using TailwindCSS, including typography generated from MD 
 - Integrating git based CMS (which in this case were MD files) with nuxt to create content-driven pages
 - Using Vue component in markdown files
 - Creating simple, sleek and content-driven website
+::
+
+## Project links
+
+::ProjectLinks{codeLink="https://github.com/Lexpeartha/portfolio"}
 ::
