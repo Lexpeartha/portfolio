@@ -17,7 +17,12 @@ export default function useProjectUtils () {
     })
   }
 
+  const openInNewWindow = (url: string) => {
+    window.open(url, '_blank')
+  }
+
   return {
-    extractProjectFromContent
+    extractProjectFromContent,
+    openInNewWindow
   }
 }

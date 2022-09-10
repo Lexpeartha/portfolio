@@ -2,9 +2,7 @@
 const { navigation } = useContent()
 const appConfig = useAppConfig() as any
 
-const openInNewWindow = (url: string) => {
-  window.open(url, '_blank')
-}
+const { openInNewWindow } = useProjectUtils()
 </script>
 
 <template>
