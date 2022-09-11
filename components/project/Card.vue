@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <NuxtLink
-    class="group max-h-[120px] bg-white hover:bg-secondary-50 dark:bg-primary-800 dark:hover:bg-secondary-900 relative rounded-lg no-underline border-2 border-primary-200 dark:border-primary-700 duration-[400ms] overflow-hidden"
+    class="group max-h-[120px] bg-white hover:bg-secondary-100 hover:border-secondary-100 dark:bg-primary-800 dark:hover:bg-secondary-900 dark:hover:border-secondary-900 relative rounded-lg no-underline border-2 border-primary-200 dark:border-primary-700 duration-[400ms] overflow-hidden"
     :to="`/project/${project.slug}`"
   >
     <img
