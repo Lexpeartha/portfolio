@@ -2,7 +2,6 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  target: 'static',
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
@@ -10,6 +9,17 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon'
   ],
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico'
+        }
+      ]
+    }
+  },
   // https://color-mode.nuxtjs.org
   colorMode: {
     classSuffix: ''
