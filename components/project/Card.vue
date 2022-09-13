@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <NuxtLink
-    class="group max-h-[120px] bg-white hover:bg-secondary-100 hover:border-secondary-100 dark:bg-primary-800 dark:hover:bg-secondary-900 dark:hover:border-secondary-900 relative rounded-lg no-underline border-2 border-primary-200 dark:border-primary-700 duration-[400ms] overflow-hidden"
+    class="group sm:max-h-[120px] bg-white hover:bg-secondary-100 hover:border-secondary-100 dark:bg-primary-800 dark:hover:bg-secondary-900 dark:hover:border-secondary-900 relative rounded-lg no-underline border-2 border-primary-200 dark:border-primary-700 duration-[400ms] overflow-hidden"
     :to="`/project/${project.slug}`"
   >
     <img
@@ -19,7 +19,7 @@ defineProps<{
         {{ project.title }}
       </h3>
       <p
-        class="text-base bg-clip-text text-transparent bg-gradient-to-r from-primary-800 dark:from-white"
+        class="text-sm sm:text-base bg-clip-text text-transparent bg-gradient-to-r from-primary-800 dark:from-white"
       >
         Click to read more...
       </p>
