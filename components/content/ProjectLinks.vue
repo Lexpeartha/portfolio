@@ -6,27 +6,28 @@ withDefaults(defineProps<{
   demoLink: '',
   codeLink: ''
 })
-
-const { openInNewWindow } = useProjectUtils()
-
 </script>
 
 <template>
   <div class="flex gap-2">
     <AppButton
       v-if="demoLink"
+      is-link
       aria-label="Open project demo"
       type="cta"
-      @click="openInNewWindow(demoLink)"
+      target="_blank"
+      :to="demoLink"
     >
       Open Demo
     </AppButton>
 
     <AppButton
       v-if="codeLink"
+      is-link
       aria-label="Open code repository"
       type="cta"
-      @click="openInNewWindow(codeLink)"
+      target="_blank"
+      :to="codeLink"
     >
       Open code repository
     </AppButton>

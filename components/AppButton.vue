@@ -1,13 +1,19 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
     type?: 'regular' | 'cta'
+    isLink?: boolean
+    to?: string
     icon?: string
     iconClasses?: string
   }>(), {
   type: 'regular',
+  isLink: false,
+  to: '',
   icon: null,
   iconClasses: ''
 })
+
+const NuxtLink = resolveComponent('NuxtLink')
 
 const styleClasses = props.type === 'regular'
   // Regular button
@@ -17,9 +23,11 @@ const styleClasses = props.type === 'regular'
 </script>
 
 <template>
-  <button
+  <component
+    :is="isLink ? NuxtLink : 'button'"
+    :to="to"
     v-bind="$attrs"
-    class="flex items-center justify-center text-center inline-block rounded-lg transition-colors duration-200 ease-out"
+    class="flex items-center justify-center no-underline text-center inline-block rounded-lg transition-colors duration-200 ease-out"
     :class="styleClasses"
   >
     <slot />
@@ -28,5 +36,5 @@ const styleClasses = props.type === 'regular'
       :name="props.icon"
       :class="$slots.default ? `ml-2 ${iconClasses}` : iconClasses"
     />
-  </button>
+  </component>
 </template>

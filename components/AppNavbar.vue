@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 const { navigation } = useContent()
 const appConfig = useAppConfig()
-
-const { openInNewWindow } = useProjectUtils()
 </script>
 
 <template>
@@ -23,17 +21,21 @@ const { openInNewWindow } = useProjectUtils()
     <div class="flex items-center justify-center gap-x-1.5 transition text-primary-500">
       <AppButton
         v-if="appConfig.socials.twitter"
+        is-link
         class="flex items-center justify-center"
         aria-label="Twitter"
-        @click="openInNewWindow(`https://twitter.com/${appConfig.socials.twitter}`)"
+        target="_blank"
+        :to="`https://twitter.com/${appConfig.socials.twitter}`"
       >
         <Icon name="ion:logo-twitter" class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5" />
       </AppButton>
       <AppButton
         v-if="appConfig.socials.github"
+        is-link
         class="flex items-center justify-center"
         aria-label="Github"
-        @click="openInNewWindow(`https://github.com/${appConfig.socials.github}`)"
+        target="_blank"
+        :to="`https://github.com/${appConfig.socials.github}`"
       >
         <Icon name="ion:logo-github" class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5" />
       </AppButton>
