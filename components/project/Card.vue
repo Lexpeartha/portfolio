@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <NuxtLink
-    class="group sm:max-h-[120px] bg-white hover:bg-secondary-100 hover:border-secondary-100 dark:bg-primary-800 dark:hover:bg-secondary-900 dark:hover:border-secondary-900 relative rounded-lg no-underline border-2 border-primary-200 dark:border-primary-700 duration-[400ms] overflow-hidden"
+    class="group max-h-[140px] sm:max-h-[120px] bg-white hover:bg-secondary-100 hover:border-secondary-100 dark:bg-primary-800 dark:hover:bg-secondary-900 dark:hover:border-secondary-900 relative rounded-lg no-underline border-2 border-primary-200 dark:border-primary-700 duration-[400ms] overflow-hidden"
     :to="`/project/${project.slug}`"
   >
     <img
@@ -14,8 +14,8 @@ defineProps<{
       :alt="project.title"
       :src="project.image"
     >
-    <div class="relative py-1 px-4 w-3/5 h-full">
-      <h3 class="transition-all my-5 text-lg group-hover:text-xl highlight">
+    <div class="relative py-1 px-4 w-4/5 sm:w-3/5 h-full">
+      <h3 class="transition-all my-5 text-lg group-hover:sm:text-xl highlight">
         {{ project.title }}
       </h3>
       <p
