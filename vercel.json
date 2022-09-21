@@ -1,7 +1,8 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     { "source": "/project/(.*)", "destination": "/project/404" },
-    { "source": "/(.*)", "destination": "/404" }
+    { "source": "/(.*)", "destination": "/404.html" }
   ],
   "github": {
     "silent": true
