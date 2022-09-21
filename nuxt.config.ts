@@ -40,9 +40,9 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: [
         '/',
-        '/sitemap.xml',
         '/404',
-        '/project/404'
+        '/project/404',
+        '/sitemap.xml'
       ]
     }
   }
