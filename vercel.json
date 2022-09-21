@@ -1,4 +1,8 @@
 {
+  "rewrites": [
+    { "source": "/project/(.*)", "destination": "/project/404" },
+    { "source": "/(.*)", "destination": "/404" }
+  ],
   "github": {
     "silent": true
   }
