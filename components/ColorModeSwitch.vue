@@ -9,6 +9,7 @@ const onClick = () => (colorMode.value === 'light'
   <div class="inline-block">
     <AppButton
       aria-label="Color Mode"
+      class="text-primary-800 dark:text-white"
       @click="onClick"
     >
       <ColorScheme placeholder="O">
