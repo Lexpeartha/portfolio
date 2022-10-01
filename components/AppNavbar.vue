@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { navigation } = useContent()
+const { navigation = [{ _path: '/', title: 'Home' }] } = useContent()
 const appConfig = useAppConfig()
 </script>
 
