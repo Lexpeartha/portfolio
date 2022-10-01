@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const { navigation = [{ _path: '/', title: 'Home' }] } = useContent()
+console.log(navigation)
 const appConfig = useAppConfig()
 </script>
 
