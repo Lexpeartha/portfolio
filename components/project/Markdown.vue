@@ -34,7 +34,7 @@ useHead({
           }) }}</i>
         </p>
       </div>
-      <ContentRenderer :value="data[0]" excerpt />
+      <ContentRenderer :value="data[0]" />
       <hr>
       <p>
         Finished reading? <NuxtLink to="/work">
