@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
+const { navigation } = useContent()
 
 const appConfig = useAppConfig()
 </script>
