@@ -1,3 +1,11 @@
+<script setup lang="ts">
+definePageMeta({
+  documentDriven: {
+    navigation: true
+  }
+})
+</script>
+
 <template>
   <div>
     <h1 class="md:text-3xl text-2xl font-semibold">
