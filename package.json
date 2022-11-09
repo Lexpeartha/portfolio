@@ -6,9 +6,9 @@
   "main": "nuxt.config.ts",
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxi build",
-    "build:vercel": "NITRO_PRESET=vercel-edge nuxi build",
-    "generate": "nuxi generate",
+    "build": "nuxi prepare && nuxi build",
+    "build:vercel": "nuxi prepare && NITRO_PRESET=vercel-edge nuxi build",
+    "generate": "nuxi prepare && nuxi generate",
     "preview": "nuxi preview",
     "lint": "eslint ."
   },
