@@ -29,6 +29,7 @@ export default defineNuxtConfig({
   content: {
     documentDriven: true,
     highlight: {
+      preload: ['json', 'js', 'ts', 'css', 'shell', 'html', 'md', 'yaml', 'csharp'],
       theme: {
         default: 'nord',
         dark: 'poimandres'
