@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const { navigation } = useContent()
+
 const appConfig = useAppConfig()
 </script>
 

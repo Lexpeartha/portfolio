@@ -1,9 +1,8 @@
 <script setup lang="ts">
 useHead({
-  titleTemplate: (chunk: string) => {
+  titleTemplate: (chunk) => {
     return chunk ? `${chunk} - Personal Website` : 'Personal Website'
-  },
-  charset: 'utf-8'
+  }
 })
 </script>
 
