@@ -25,7 +25,7 @@ Game made in my spare to time to learn, practice and have fun with Godot Engine 
 
 ## Description & details
 
-Game was made with [Godot]{.highlight} and [C#]{.highlight}, and published on Itch.io. It's a simple puzzle game, I used as an opportunity to dive into Godot Engine and design some puzzles. Every sprite was created in [Aseprite]{.highlight}.
+Game was made with [Godot]{.highlight} and [C#]{.highlight}, and published on Itch.io. It's a simple puzzle game I used as an opportunity to dive into Godot Engine and design some puzzles. Every sprite was created in [Aseprite]{.highlight}.
 
 Game is partially inspired by puzzles from games such as *Portal*, *The Witness* and *Baba Is You*.
 
@@ -58,7 +58,7 @@ This use for inheritance was pretty neat, since I could create as many levels as
 
 ::list
 - Use OOP principles to create reusable scripts for the game nodes
-- Create a simple level editor, with tool scripts to make level design a breeze
+- Create a simple level editor along with tool scripts to make level design a breeze
 - Use Godot's built-in systems to manage audio, scene transitions and etc.
 ::
 
