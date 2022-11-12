@@ -27,9 +27,6 @@ export default defineNuxtConfig({
   ],
   // https://content.nuxtjs.org
   content: {
-    experimental: {
-      clientDB: true
-    },
     documentDriven: true,
     highlight: {
       theme: {
@@ -43,7 +40,7 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: [
         '/',
-        // '/404.html',
+        '/404.html',
         '/project/404',
         '/sitemap.xml'
       ]
