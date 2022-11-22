@@ -36,6 +36,9 @@ export default defineNuxtConfig({
       }
     }
   },
+  generate: {
+    routes: ['/', '/work', '/404']
+  },
   nitro: {
     prerender: {
       crawlLinks: true,
@@ -46,5 +49,8 @@ export default defineNuxtConfig({
         '/sitemap.xml'
       ]
     }
+  },
+  experimental: {
+    writeEarlyHints: true
   }
 })
