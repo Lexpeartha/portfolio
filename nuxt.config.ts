@@ -1,12 +1,5 @@
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/content',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
-    '@vueuse/nuxt',
-    'nuxt-icon'
-  ],
   app: {
     head: {
       link: [
@@ -18,6 +11,13 @@ export default defineNuxtConfig({
       ]
     }
   },
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    '@vueuse/nuxt',
+    'nuxt-icon'
+  ],
   // https://color-mode.nuxtjs.org
   colorMode: {
     classSuffix: ''
