@@ -9,8 +9,8 @@ export default defineEventHandler(async (event) => {
   })
 
   for (const doc of docs.filter((d) => {
-    const items = d._path.split('/')
-    return !items.at(-1).startsWith('_')
+    const items = d._path?.split('/')
+    return (items?.at(-1) as string).startsWith('_')
   })) {
     sitemap.write({
       url: doc._path,

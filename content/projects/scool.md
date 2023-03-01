@@ -43,4 +43,4 @@ Most of the app's logic was implemented using Factory Pattern, which is a OOP de
 
 ## Project links
 
-Project has been discounted, and Firebase instance that was supporting it has been deleted. Source code is private, due to agreement we entered by joining the competition and code can't available for public.
+Project has been discounted, and Firebase instance that was supporting it has been deleted. Source code is private, due to agreement we entered by joining the competition and code isn't available for public.
