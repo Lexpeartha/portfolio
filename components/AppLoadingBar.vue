@@ -36,7 +36,9 @@ function clear () {
   _timer = null
 }
 function start () {
-  if (data.show) { return }
+  if (data.show) {
+    return
+  }
   clear()
   data.percent = 0
   data.canSucceed = true
@@ -95,7 +97,7 @@ onBeforeUnmount(() => clear)
   />
 </template>
 
-<style>
+<style lang="scss">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -104,7 +106,19 @@ onBeforeUnmount(() => clear)
   width: 0%;
   opacity: 1;
   transition: width 0.1s, height 0.4s, opacity 0.4s;
-  background: repeating-linear-gradient(to right, #00dc82 0%, #34cdfe 50%, #0047e1 100%);
+  background: repeating-linear-gradient(to right, #2dd4bf 0%, #115e59 100%);
   z-index: 999999;
+}
+
+.light {
+  .nuxt-progress {
+    background: repeating-linear-gradient(to right, #0d9488 0%, #115e59 100%);
+  }
+}
+
+.dark {
+  .nuxt-progress {
+    background: repeating-linear-gradient(to right, #2dd4bf 0%, #0d9488 100%);
+  }
 }
 </style>
