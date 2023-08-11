@@ -77,12 +77,12 @@ $opacity-light: 4%;
 
 .light {
   body {
-    @include background-pattern(url("./images/pattern-light.svg"), false);
+    @include background-pattern(url("/images/pattern-light.svg"), false);
   }
 }
 
 .dark {
   body {
-    @include background-pattern(url("./images/pattern-dark.svg"), true);
+    @include background-pattern(url("/images/pattern-dark.svg"), true);
   }
 }
