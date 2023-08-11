@@ -1,6 +1,6 @@
 /*-- VARIABLES --*/
-$opacity-dark: 18%;
-$opacity-light: 24%;
+$opacity-dark: 4%;
+$opacity-light: 3%;
 
 /*-- TRANSITIONS & ANIMATIONS --*/
 .scale {
@@ -26,7 +26,7 @@ $opacity-light: 24%;
 /*-- MIXINS --*/
 @mixin background-pattern($url, $isDark: false) {
   &::after {
-    content: '';
+    content: "";
     @if $isDark {
       opacity: $opacity-dark;
     } @else {
@@ -42,13 +42,15 @@ $opacity-light: 24%;
     z-index: -10;
     background-image: $url;
     background-repeat: repeat;
-    animation-name: fade-in;
-    animation-duration: 1s;
   }
 }
 
 /*-- GLOBAL STYLES --*/
 .prose {
+  a:not(h1 a):not(h2 a) {
+    @apply text-secondary-900 decoration-secondary-900 dark:text-secondary-100 dark:decoration-secondary-100;
+  }
+
   h2 a,
   h3 a {
     @apply no-underline;
@@ -60,7 +62,7 @@ $opacity-light: 24%;
   code {
     &::before,
     &::after {
-      content: ""
+      content: "";
     }
   }
 
@@ -75,12 +77,12 @@ $opacity-light: 24%;
 
 .light {
   body {
-    @include background-pattern(url('/images/pattern-light.png'), false);
+    @include background-pattern(url("./images/pattern-light.svg"), false);
   }
 }
 
 .dark {
   body {
-    @include background-pattern(url('/images/pattern-dark.png'), true);
+    @include background-pattern(url("./images/pattern-dark.svg"), true);
   }
 }

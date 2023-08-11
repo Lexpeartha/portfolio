@@ -5,8 +5,10 @@ const projectsList: Project[] = []
 
 const { extractProjectFromContent } = useProjectUtils()
 
-for (const project of content.value) {
+for (const project of content.value!) {
   const p = extractProjectFromContent(project)
+
+  if (!p) { continue }
 
   projectsList.push(p)
 }
