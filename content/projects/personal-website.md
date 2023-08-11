@@ -25,17 +25,18 @@ The very website you're on! I've made it to showcase my projects and skills, and
 
 ![Screenshot of my personal website](/images/projects/personal-website.png){.highlight-image}
 
-Website is created with Vue 3 and Nuxt 3 for SSR. It was made from [Content-Wind](https://content-wind.nuxt.dev/){target="_blank"} project template, but was heavily modified to suit my needs.
+Website is created with Vue 3 and Nuxt 3 for SSR, deployed on the edge. It was made from [Content-Wind](https://content-wind.nuxt.dev/){target="_blank"} project template, but was heavily modified to suit my needs.
 
 Website uses Nuxt content module with document driven mode, utilizing markdown files for generating pages, instead of usual Vue files.
 
-Everything was styled using TailwindCSS, including typography generated from MD with `@tailwindcss/typography` plugin. Exceptions are minor details and utilities that were added to make the website look better, which are written in SCSS.
+Everything was styled and customized using TailwindCSS, including typography generated from MD with `@tailwindcss/typography` plugin. Exceptions are minor details and utilities that were added to make the website look better, which are written in SCSS.
 
 ## Solved problems
 
 ::list
 - Integrating git based CMS (which in this case were MD files) with nuxt to create content-driven pages
-- Using Vue component in markdown files
+- Making interactive pages in markdown files with Vue component
+- Using `@nuxt/content` with document-driven (DD) mode
 - Creating simple, sleek and content-driven website
 ::
 
