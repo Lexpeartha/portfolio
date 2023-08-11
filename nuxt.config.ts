@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
+    '@nuxt/image',
     'nuxt-icon'
   ],
   // https://color-mode.nuxtjs.org
@@ -35,6 +36,10 @@ export default defineNuxtConfig({
         dark: 'poimandres'
       }
     }
+  },
+  image: {
+    provider: 'ipx',
+    format: ['webp', 'png', 'jpg', 'jpeg']
   },
   generate: {
     routes: ['/', '/work', '/404.html']
