@@ -13,6 +13,7 @@ useHead({
     <AppLoadingBar />
     <AppNavbar />
     <NuxtPage />
+    <AppFooter />
   </div>
 </template>
 
