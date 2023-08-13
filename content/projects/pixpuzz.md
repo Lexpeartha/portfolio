@@ -52,7 +52,7 @@ public class Level : Node2D
 
 This use for inheritance was pretty neat, since I could create as many levels as I wanted, and each level could have its own logic, but still use the same base class with core functionality that makes the game work, and to customize it I just needed to override `OnLevelReady` method. I also used the same base class for other things, such as buttons, doors, etc.
 
-![Screenshot from my game](/images/projects/pixpuzz.png){.highlight-image}
+![Screenshot from my game](/images/projects/pixpuzz.png){.highlight-image preset="showcase"}
 
 ## Solved problems
 

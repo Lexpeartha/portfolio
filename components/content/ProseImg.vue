@@ -1,3 +1,3 @@
 <template>
-  <nuxt-img />
+  <nuxt-img format="webp" />
 </template>

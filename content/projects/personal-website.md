@@ -23,7 +23,7 @@ The very website you're on! I've made it to showcase my projects and skills, and
 
 ## Description & details
 
-![Screenshot of my personal website](/images/projects/personal-website.png){.highlight-image}
+![Screenshot of my personal website](/images/projects/personal-website.png){.highlight-image preset="showcase"}
 
 Website is created with Vue 3 and Nuxt 3 for SSR, deployed on the edge. It was made from [Content-Wind](https://content-wind.nuxt.dev/){target="_blank"} project template, but was heavily modified to suit my needs.
 
