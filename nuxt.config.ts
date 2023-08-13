@@ -65,7 +65,7 @@ export default defineNuxtConfig({
     },
   },
   generate: {
-    routes: ['/', '/work', '/404.html']
+    routes: ['/', '/404.html']
   },
   nitro: {
     //prerender: {
