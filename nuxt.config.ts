@@ -1,3 +1,5 @@
+import colors from 'tailwindcss/colors'
+
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   app: {
@@ -16,6 +18,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
+    '@nuxt/image',
     'nuxt-icon'
   ],
   // https://color-mode.nuxtjs.org
@@ -36,6 +39,31 @@ export default defineNuxtConfig({
       }
     }
   },
+  image: {
+    provider: 'ipx',
+    format: ['webp', 'png', 'jpg', 'jpeg'],
+    presets: {
+      showcase: {
+        modifiers: {
+          fit: 'contain',
+          loading: 'lazy',
+          width: 1280,
+          height: 720,
+          quality: 85,
+          // TODO: change this to teal[700] when theme is light
+          // background: colors.teal[500]
+        },
+      },
+      preview: {
+        modifiers: {
+          fit: 'cover',
+          width: 1200,
+          position: 'left',
+          quality: 45
+        }
+      }
+    },
+  },
   generate: {
     routes: ['/', '/work', '/404.html']
   },
@@ -46,7 +74,7 @@ export default defineNuxtConfig({
         '/',
         '/404.html',
         '/project/404',
-        '/sitemap.xml'
+      '/sitemap.xml'
       ]
     }
   },

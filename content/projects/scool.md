@@ -23,7 +23,7 @@ App created for national app competition. It uses Flutter & Firebase, and it cen
 
 ## Description & details
 
-![Thumbnail Scool app image](/images/projects/scool.jpg){.highlight-image}
+![Thumbnail Scool app image](/images/projects/scool.jpg){.highlight-image preset="showcase"}
 
 App created for national app competition, which centers around schooling online. It's made with Flutter & Firebase, and it includes many features modern apps usually use: file storage, chatting and authentication.
 
