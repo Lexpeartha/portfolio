@@ -69,6 +69,10 @@ $opacity-light: 4%;
   .highlight {
     @apply text-secondary-700 dark:text-secondary-500;
   }
+
+  .tooltip {
+    @apply underline decoration-dotted decoration-primary-500 cursor-help;
+  }
 }
 
 .highlight-image {
