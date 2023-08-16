@@ -13,7 +13,7 @@ description: >
 
 Game made in my spare to time to learn, practice and have fun with Godot Engine and C#. It's a simple puzzle game, where you have to reach the portal by moving blocks around.
 
-<iframe src="https://itch.io/embed-upload/6789138?color=315e83" allowfullscreen="" width="100%" height="540" frameborder="0"><a href="https://lexpeartha.itch.io/pixpuzz">Play Pixpuzz on itch.io</a></iframe>
+<iframe class="h-[320px] sm:h-[380px] lg:h-[540px]" src="https://itch.io/embed-upload/6789138?color=315e83" allowfullscreen width="100%" frameborder="0"><a href="https://lexpeartha.itch.io/pixpuzz">Play Pixpuzz on itch.io</a></iframe>
 
 ## Tools used
 
