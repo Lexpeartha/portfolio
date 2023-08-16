@@ -12,7 +12,7 @@ const openMail = () => {
   <div class="flex gap-2.5 h-10">
     <AppButton
       type="cta"
-      aria-label="Send email"
+      aria-label="Send me an email"
       @click="openMail()"
     >
       Send me an email
