@@ -16,7 +16,7 @@ export default defineEventHandler(async (event) => {
     const isProject = documentPath?.includes('projects')
 
     sitemap.write({
-      url: documentPath,
+      url: documentPath?.join('/'),
       changefreq: 'monthly',
       lastmod: new Date(),
       priority: isProject ? 0.3 : 0.7
