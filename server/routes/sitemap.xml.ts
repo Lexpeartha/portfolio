@@ -10,11 +10,16 @@ export default defineEventHandler(async (event) => {
 
   for (const doc of docs.filter((d) => {
     const items = d._path?.split('/')
-    return (items?.at(-1) as string).startsWith('_')
+    return !(items?.at(-1) as string).startsWith('_')
   })) {
+    const documentPath = doc._path?.split('/')
+    const isProject = documentPath?.includes('projects')
+
     sitemap.write({
-      url: doc._path,
-      changefreq: 'monthly'
+      url: documentPath,
+      changefreq: 'monthly',
+      lastmod: new Date(),
+      priority: isProject ? 0.3 : 0.7
     })
   }
   sitemap.end()
