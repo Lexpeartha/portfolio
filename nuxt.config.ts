@@ -36,14 +36,12 @@ export default defineNuxtConfig({
       }
     }
   },
-  generate: {
-    routes: ['/', '/work', '/404.html']
-  },
   nitro: {
     prerender: {
       crawlLinks: true,
       routes: [
         '/',
+        '/work',
         '/404.html',
         '/project/404',
         '/sitemap.xml'
