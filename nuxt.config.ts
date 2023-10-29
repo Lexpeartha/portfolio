@@ -1,5 +1,3 @@
-import colors from 'tailwindcss/colors'
-
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   app: {
@@ -74,7 +72,7 @@ export default defineNuxtConfig({
         '/',
         '/404.html',
         '/project/404',
-      '/sitemap.xml'
+        '/sitemap.xml'
       ]
     }
   },
