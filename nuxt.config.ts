@@ -76,10 +76,6 @@ export default defineNuxtConfig({
       ]
     }
   },
-  alias: { // Fixes incompatibility problems for now: https://github.com/nuxt/content/issues/2254
-    "micromark/lib/preprocess.js": "micromark",
-    "micromark/lib/postprocess.js": "micromark",
-  },
   experimental: {
     writeEarlyHints: true
   }
