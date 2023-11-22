@@ -6,24 +6,23 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi prepare && nuxi build",
-    "build:vercel": "nuxi prepare && NITRO_PRESET=vercel-edge nuxi build",
     "generate": "nuxi prepare && nuxi generate",
     "preview": "nuxi preview",
     "lint": "eslint ."
   },
   "dependencies": {
-    "@nuxt/content": "~2.8.0",
+    "@nuxt/content": "~2.9.0",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/tailwindcss": "^6.9.4",
     "@tailwindcss/typography": "^0.5.10",
     "@vueuse/core": "^9.13.0",
     "@vueuse/nuxt": "^9.13.0",
-    "nuxt-icon": "^0.5.0"
+    "nuxt-icon": "^0.6.6"
   },
   "devDependencies": {
     "@nuxt/image": "^1.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "eslint": "^8.52.0",
+    "eslint": "^8.53.0",
     "nuxt": "~3.8.1",
     "postcss-custom-properties": "^13.3.2",
     "sass": "^1.69.5",

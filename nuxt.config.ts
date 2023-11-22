@@ -66,6 +66,7 @@ export default defineNuxtConfig({
     routes: ['/', '/work', '/404.html']
   },
   nitro: {
+    preset: 'vercel-edge',
     prerender: {
       crawlLinks: true,
       routes: [
@@ -74,7 +75,13 @@ export default defineNuxtConfig({
         '/project/404',
         '/sitemap.xml'
       ]
+    },
+    wasm: {
+      rollup: {
+        targetEnv: 'browser'
+      }
     }
+
   },
   experimental: {
     writeEarlyHints: true
