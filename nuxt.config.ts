@@ -66,7 +66,7 @@ export default defineNuxtConfig({
     routes: ['/', '/work', '/404.html']
   },
   nitro: {
-    preset: 'vercel-edge',
+    preset: 'vercel',
     prerender: {
       crawlLinks: true,
       routes: [
