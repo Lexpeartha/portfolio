@@ -5,7 +5,7 @@
   "main": "nuxt.config.ts",
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxi prepare && nuxi build",
+    "build": "nuxi prepare && NITRO_PRESET=vercel nuxi build",
     "generate": "nuxi prepare && nuxi generate",
     "preview": "nuxi preview",
     "lint": "eslint ."
