@@ -1,23 +1,34 @@
 <script setup lang="ts">
-// Utils from Nuxt Content
-const { flatUnwrap } = useUnwrap()
+import { resolveComponent } from "vue";
 
-const slots = useSlots()
-const unwrappedSlots = slots.default ? flatUnwrap(slots.default(), ['ul']) : []
+const { flatUnwrap, unwrap } = useUnwrap();
+
+const slots = useSlots();
+
+function renderListElements() {
+	return flatUnwrap(slots.default!(), ["ul"]).map((element: any) =>
+		h(resolveComponent("MDCSlot"), { use: () => element, unwrap: "li" }),
+	);
+}
 
 defineProps({
-  icon: {
-    type: String,
-    default: 'ion:checkbox'
-  }
-})
+	icon: {
+		type: String,
+		default: "ion:checkbox",
+	},
+});
 </script>
 
 <template>
-  <ul class="p-0">
-    <li v-for="(item, index) of unwrappedSlots" :key="index" class="flex pl-0 space-x-2">
-      <Icon :name="icon" class="flex-shrink-0 w-6 h-6 mt-1 highlight" />
-      <span><ContentSlot :use="() => item" unwrap="li" /></span>
-    </li>
-  </ul>
+	<ul class="p-0 list-none">
+		<li class="flex p-0" v-for="(el, i) in renderListElements()" :key="i">
+			<Icon
+				:name="icon"
+				class="flex-shrink-0 min-w-6 min-h-6 pt-0.5 mr-2 highlight"
+			/>
+			<span>
+				<component :is="() => unwrap(el, ['li'])" />
+			</span>
+		</li>
+	</ul>
 </template>
