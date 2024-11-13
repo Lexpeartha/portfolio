@@ -1,92 +1,92 @@
 /*-- VARIABLES --*/
-$opacity-dark: 2%;
+$opacity-dark: 3%;
 $opacity-light: 4%;
 
 /*-- TRANSITIONS & ANIMATIONS --*/
 .scale {
-  &-enter-active {
-    @apply transition duration-200 ease-in-out;
-  }
+	&-enter-active {
+		@apply transition duration-200 ease-in-out;
+	}
 
-  &-leave-active {
-    @apply transition duration-150 ease-out;
-  }
+	&-leave-active {
+		@apply transition duration-150 ease-out;
+	}
 
-  &-enter-from,
-  &-leave-to {
-    @apply scale-75 transform opacity-0;
-  }
+	&-enter-from,
+	&-leave-to {
+		@apply scale-75 transform opacity-0;
+	}
 
-  &-enter-to,
-  &-leave-from {
-    @apply scale-100 transform opacity-100;
-  }
+	&-enter-to,
+	&-leave-from {
+		@apply scale-100 transform opacity-100;
+	}
 }
 
 /*-- MIXINS --*/
 @mixin background-pattern($url, $isDark: false) {
-  &::after {
-    content: "";
-    @if $isDark {
-      opacity: $opacity-dark;
-    } @else {
-      opacity: $opacity-light;
-    }
-    display: block;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    pointer-events: none;
-    top: 0;
-    left: 0;
-    z-index: -10;
-    background-image: $url;
-    background-repeat: repeat;
-  }
+	&::after {
+		content: "";
+		@if $isDark {
+			opacity: $opacity-dark;
+		} @else {
+			opacity: $opacity-light;
+		}
+		display: block;
+		height: 100vh;
+		width: 100vw;
+		position: fixed;
+		pointer-events: none;
+		top: 0;
+		left: 0;
+		z-index: -10;
+		background-image: $url;
+		background-repeat: repeat;
+	}
 }
 
 /*-- GLOBAL STYLES --*/
 .prose {
-  a:not(h1 a):not(h2 a) {
-    @apply text-secondary-900 decoration-secondary-900 dark:text-secondary-100 dark:decoration-secondary-100;
-  }
+	a:not(h1 a):not(h2 a) {
+		@apply text-secondary-900 decoration-secondary-900 dark:text-secondary-100 dark:decoration-secondary-100;
+	}
 
-  h2 a,
-  h3 a {
-    @apply no-underline;
-    &:hover {
-      @apply underline decoration-wavy decoration-0 decoration-secondary-600 dark:decoration-secondary-300;
-    }
-  }
+	h2 a,
+	h3 a {
+		@apply no-underline;
+		&:hover {
+			@apply underline decoration-wavy decoration-0 decoration-secondary-600 dark:decoration-secondary-300;
+		}
+	}
 
-  code {
-    &::before,
-    &::after {
-      content: "";
-    }
-  }
+	code {
+		&::before,
+		&::after {
+			content: "";
+		}
+	}
 
-  .highlight {
-    @apply text-secondary-700 dark:text-secondary-500;
-  }
+	.highlight {
+		@apply text-secondary-700 dark:text-secondary-500;
+	}
 
-  .tooltip {
-    @apply underline decoration-dotted decoration-primary-500 cursor-help;
-  }
+	.tooltip {
+		@apply underline decoration-dotted decoration-primary-500 cursor-help;
+	}
 }
 
 .highlight-image {
-  @apply rounded-lg border border-secondary-700 dark:border-secondary-500;
+	@apply rounded-lg border border-secondary-700 dark:border-secondary-500;
 }
 
 .light {
-  body {
-    @include background-pattern(url("/images/pattern-light.svg"), false);
-  }
+	body {
+		@include background-pattern(url("/images/pattern-light.svg"), false);
+	}
 }
 
 .dark {
-  body {
-    @include background-pattern(url("/images/pattern-dark.svg"), true);
-  }
+	body {
+		@include background-pattern(url("/images/pattern-dark.svg"), true);
+	}
 }

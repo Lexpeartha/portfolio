@@ -1,11 +1,9 @@
-import { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 
 export default <Config>{
   darkMode: 'class',
-  plugins: [
-    require('@tailwindcss/typography')
-  ],
+  plugins: [require('@tailwindcss/typography')],
   content: [
     'components/**/*.{vue,ts,tsx}',
     'content/**/*.md',

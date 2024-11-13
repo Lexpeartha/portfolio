@@ -11,6 +11,7 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
@@ -18,37 +19,56 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon'
   ],
+
   // https://color-mode.nuxtjs.org
   colorMode: {
     classSuffix: ''
   },
-  css: [
-    '~/assets/styles/global.scss'
-  ],
+
+  css: ['~/assets/styles/global.scss'],
+
   // https://content.nuxtjs.org
   content: {
     documentDriven: true,
     highlight: {
-      preload: ['json', 'js', 'ts', 'css', 'shell', 'html', 'md', 'yaml', 'csharp'],
+      preload: [
+        'json',
+        'js',
+        'ts',
+        'css',
+        'shell',
+        'html',
+        'md',
+        'yaml',
+        'csharp'
+      ],
       theme: {
         default: 'nord',
         dark: 'poimandres'
       }
     }
   },
+
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: [
-        '/',
-        '/work',
-        '/404.html',
-        '/project/404',
-        '/sitemap.xml'
-      ]
+      routes: ['/', '/work', '/404.html', '/project/404', '/sitemap.xml']
     }
   },
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          silenceDeprecations: ['legacy-js-api']
+        }
+      }
+    }
+  },
+
   experimental: {
     writeEarlyHints: true
-  }
+  },
+
+  compatibilityDate: '2024-11-13'
 })
