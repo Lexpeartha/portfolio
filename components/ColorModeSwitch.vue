@@ -13,7 +13,10 @@ const onClick = () => (colorMode.value === 'light'
       @click="onClick"
     >
       <ColorScheme placeholder="O">
-        <Transition mode="out-in" name="scale">
+        <Transition
+          mode="out-in"
+          name="scale"
+        >
           <Icon
             v-if="colorMode.value === 'dark'"
             class="text-white text-xl w-5 h-5"

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
-    demoLink?: string;
-    codeLink?: string;
+  demoLink?: string
+  codeLink?: string
 }>(), {
   demoLink: '',
-  codeLink: ''
+  codeLink: '',
 })
 </script>
 

@@ -1,74 +1,82 @@
-// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+// https://nuxt.com/docs/getting-started/configuration
 export default defineNuxtConfig({
-  app: {
-    head: {
-      link: [
-        {
-          rel: 'icon',
-          type: 'image/x-icon',
-          href: '/favicon.ico'
-        }
-      ]
-    }
-  },
 
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
-    'nuxt-icon'
+    '@nuxt/icon',
+    '@nuxt/eslint',
   ],
-
-  // https://color-mode.nuxtjs.org
-  colorMode: {
-    classSuffix: ''
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+        },
+      ],
+    },
   },
 
   css: ['~/assets/styles/global.scss'],
 
+  // https://color-mode.nuxtjs.org
+  colorMode: {
+    classSuffix: '',
+  },
+
   // https://content.nuxtjs.org
   content: {
-    documentDriven: true,
-    highlight: {
-      preload: [
-        'json',
-        'js',
-        'ts',
-        'css',
-        'shell',
-        'html',
-        'md',
-        'yaml',
-        'csharp'
-      ],
-      theme: {
-        default: 'nord',
-        dark: 'poimandres'
-      }
-    }
+    build: {
+      markdown: {
+        highlight: {
+          langs: ['json', 'js', 'ts', 'css', 'shell', 'html', 'md', 'yaml', 'csharp'],
+          theme: {
+            default: 'nord',
+            dark: 'poimandres',
+          },
+        },
+      },
+    },
   },
+
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  experimental: {
+    writeEarlyHints: true,
+  },
+
+  compatibilityDate: '2026-01-01',
 
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/work', '/404.html', '/project/404', '/sitemap.xml']
-    }
+      routes: ['/', '/work', '/404.html', '/sitemap.xml'],
+    },
   },
 
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          silenceDeprecations: ['legacy-js-api']
-        }
-      }
-    }
+          silenceDeprecations: ['legacy-js-api'],
+        },
+      },
+    },
   },
 
-  experimental: {
-    writeEarlyHints: true
+  eslint: {
+    config: {
+      stylistic: {
+        indent: 2,
+        quotes: 'single',
+        semi: false,
+      },
+    },
   },
-
-  compatibilityDate: '2024-11-13'
 })

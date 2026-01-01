@@ -73,6 +73,15 @@ $opacity-light: 4%;
 	.tooltip {
 		@apply underline decoration-dotted decoration-primary-500 cursor-help;
 	}
+
+	/* Fix certain iconify icons in markdown being slightly misaligned */
+	.iconify:not(a > .iconify):not(a + .iconify):not(:has(+ a)) {
+		@apply translate-y-0.5;
+	}
+
+	::marker {
+		@apply text-secondary-700 dark:text-secondary-500;
+	}
 }
 
 .highlight-image {

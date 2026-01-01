@@ -4,16 +4,16 @@ import { useNuxtApp, onBeforeUnmount, reactive } from '#imports'
 const props = defineProps({
   throttle: {
     type: Number,
-    default: 200
+    default: 200,
   },
   duration: {
     type: Number,
-    default: 2000
+    default: 2000,
   },
   height: {
     type: Number,
-    default: 3
-  }
+    default: 3,
+  },
 })
 
 const nuxtApp = useNuxtApp()
@@ -22,7 +22,7 @@ const nuxtApp = useNuxtApp()
 const data = reactive({
   percent: 0,
   show: false,
-  canSucceed: true
+  canSucceed: true,
 })
 // Local variables
 let _timer = null
@@ -30,12 +30,16 @@ let _throttle = null
 let _cut
 
 // Functions
-function clear () {
-  _timer && clearInterval(_timer)
-  _throttle && clearTimeout(_throttle)
+function clear() {
+  if (_timer) {
+    clearInterval(_timer)
+  }
+  if (_throttle) {
+    clearTimeout(_throttle)
+  }
   _timer = null
 }
-function start () {
+function start() {
   if (data.show) {
     return
   }
@@ -45,18 +49,19 @@ function start () {
 
   if (props.throttle) {
     _throttle = setTimeout(startTimer, props.throttle)
-  } else {
+  }
+  else {
     startTimer()
   }
 }
-function increase (num) {
+function increase(num) {
   data.percent = Math.min(100, Math.floor(data.percent + num))
 }
-function finish () {
+function finish() {
   data.percent = 100
   hide()
 }
-function hide () {
+function hide() {
   clear()
   setTimeout(() => {
     data.show = false
@@ -65,7 +70,7 @@ function hide () {
     }, 400)
   }, 500)
 }
-function startTimer () {
+function startTimer() {
   data.show = true
   _cut = 10000 / Math.floor(props.duration)
   _timer = setInterval(() => {

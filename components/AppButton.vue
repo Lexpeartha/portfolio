@@ -1,16 +1,16 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-    type?: 'regular' | 'cta'
-    isLink?: boolean
-    to?: string
-    icon?: string
-    iconClasses?: string
-  }>(), {
+  type?: 'regular' | 'cta'
+  isLink?: boolean
+  to?: string
+  icon?: string
+  iconClasses?: string
+}>(), {
   type: 'regular',
   isLink: false,
   to: '',
   icon: null,
-  iconClasses: ''
+  iconClasses: '',
 })
 
 const NuxtLink = resolveComponent('NuxtLink')
