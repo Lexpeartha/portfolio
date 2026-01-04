@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: content } = await useAsyncData('all-projects', () => queryContent('/projects').find())
+const { data: content } = await useAsyncData('all-projects', () => queryCollection('projects').all())
 
 const projectsList: Project[] = []
 
@@ -8,7 +8,9 @@ const { extractProjectFromContent } = useProjectUtils()
 for (const project of content.value!) {
   const p = extractProjectFromContent(project)
 
-  if (!p) { continue }
+  if (!p) {
+    continue
+  }
 
   projectsList.push(p)
 }
@@ -28,16 +30,28 @@ const otherProjects = projectsList.filter(p => p.category === 'other')
 
 <template>
   <div>
-    <ProjectCategory v-if="appProjects.length" category="apps" :projects="appProjects" />
+    <ProjectCategory
+      v-if="appProjects.length"
+      category="apps"
+      :projects="appProjects"
+    />
 
-    <ProjectCategory v-if="websiteProjects.length" category="websites" :projects="websiteProjects" />
+    <ProjectCategory
+      v-if="websiteProjects.length"
+      category="websites"
+      :projects="websiteProjects"
+    />
 
-    <ProjectCategory v-if="gameProjects.length" category="games" :projects="gameProjects" />
+    <ProjectCategory
+      v-if="gameProjects.length"
+      category="games"
+      :projects="gameProjects"
+    />
 
-    <ProjectCategory v-if="otherProjects.length" category="other" :projects="otherProjects" />
-
-    <!-- <div v-for="c of content" :key="c.slug">
-      <ContentRenderer :value="c" />
-    </div> -->
+    <ProjectCategory
+      v-if="otherProjects.length"
+      category="other"
+      :projects="otherProjects"
+    />
   </div>
 </template>

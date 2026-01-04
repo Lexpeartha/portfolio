@@ -1,71 +1,78 @@
 <script lang="ts" setup>
-const { navigation } = useContent();
+const { data: navData } = await useAsyncData('navigation', () =>
+  queryCollectionNavigation('content'),
+)
+
+// Filter out items where page is false or navigation should be hidden
+const navigation = computed(() =>
+  navData.value?.filter(item => item.page !== false) || [],
+)
 
 const appConfig = useAppConfig();
 </script>
 
 <template>
-	<div
-		class="flex justify-between items-center max-w-2xl px-4 py-4 mx-auto sm:px-8"
-	>
-		<!-- Navigation -->
-		<div class="text-primary-700 dark:text-primary-200">
-			<NuxtLink
-				v-for="link of navigation"
-				:key="link._path"
-				:to="link._path"
-				active-class="font-bold"
-				class="mr-6"
-			>
-				{{ link.title }}
-			</NuxtLink>
-		</div>
-		<!-- Social icons & Color Mode -->
-		<div
-			class="flex items-center justify-center gap-x-1.5 transition text-primary-500"
-		>
-			<AppButton
-				v-if="appConfig.socials.github"
-				is-link
-				class="flex items-center justify-center"
-				aria-label="Github"
-				target="_blank"
-				:to="`https://bsky.app/profile/${appConfig.socials.bluesky}`"
-			>
-				<Icon
-					name="simple-icons:bluesky"
-					class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5"
-				/>
-			</AppButton>
-			<AppButton
-				v-if="appConfig.socials.x"
-				is-link
-				class="flex items-center justify-center"
-				aria-label="Twitter"
-				target="_blank"
-				:to="`https://x.com/${appConfig.socials.x}`"
-			>
-				<Icon
-					name="ion:logo-x"
-					class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5"
-				/>
-			</AppButton>
-			<AppButton
-				v-if="appConfig.socials.github"
-				is-link
-				class="flex items-center justify-center"
-				aria-label="Github"
-				target="_blank"
-				:to="`https://github.com/${appConfig.socials.github}`"
-			>
-				<Icon
-					name="ion:logo-github"
-					class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5"
-				/>
-			</AppButton>
-			<ColorModeSwitch
-				class="dark:text-primary-100 hover:text-primary-700 dark:hover:text-primary-300"
-			/>
-		</div>
-	</div>
+  <div
+    class="flex justify-between items-center max-w-2xl px-4 py-4 mx-auto sm:px-8"
+  >
+    <!-- Navigation -->
+    <div class="text-primary-700 dark:text-primary-200">
+      <NuxtLink
+        v-for="link of navigation"
+        :key="link.path"
+        :to="link.path"
+        active-class="font-bold"
+        class="mr-6"
+      >
+        {{ link.title }}
+      </NuxtLink>
+    </div>
+    <!-- Social icons & Color Mode -->
+    <div
+      class="flex items-center justify-center gap-x-1 transition text-primary-500"
+    >
+      <AppButton
+        v-if="appConfig.socials.github"
+        is-link
+        class="flex items-center justify-center"
+        aria-label="Github"
+        target="_blank"
+        :to="`https://bsky.app/profile/${appConfig.socials.bluesky}`"
+      >
+        <Icon
+          name="simple-icons:bluesky"
+          class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5"
+        />
+      </AppButton>
+      <AppButton
+        v-if="appConfig.socials.x"
+        is-link
+        class="flex items-center justify-center"
+        aria-label="Twitter"
+        target="_blank"
+        :to="`https://x.com/${appConfig.socials.x}`"
+      >
+        <Icon
+          name="ion:logo-x"
+          class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5"
+        />
+      </AppButton>
+      <AppButton
+        v-if="appConfig.socials.github"
+        is-link
+        class="flex items-center justify-center"
+        aria-label="Github"
+        target="_blank"
+        :to="`https://github.com/${appConfig.socials.github}`"
+      >
+        <Icon
+          name="ion:logo-github"
+          class="p-0 text-primary-800 dark:text-white text-xl w-5 h-5"
+        />
+      </AppButton>
+      <ColorModeSwitch
+        class="dark:text-primary-100 hover:text-primary-700 dark:hover:text-primary-300"
+      />
+    </div>
+  </div>
 </template>

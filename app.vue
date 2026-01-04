@@ -2,7 +2,7 @@
 useHead({
   titleTemplate: (chunk) => {
     return chunk ? `${chunk} - Personal Website` : 'Personal Website'
-  }
+  },
 })
 </script>
 

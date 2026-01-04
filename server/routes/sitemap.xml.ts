@@ -1,29 +1,29 @@
 import { SitemapStream, streamToPromise } from 'sitemap'
-import { serverQueryContent } from '#content/server'
+import { queryCollection } from '@nuxt/content/server'
 
 export default defineEventHandler(async (event) => {
   // Fetch all documents
-  const docs = await serverQueryContent(event).find()
+  const docs = await queryCollection(event, 'content').all()
 
   // Add headers
   event.node.res.setHeader('Content-Type', 'application/xml')
 
   // Create sitemap stream and add items to it
   const sitemap = new SitemapStream({
-    hostname: 'https://www.lexpeartha.com'
+    hostname: 'https://www.lexpeartha.com',
   })
   for (const doc of docs.filter((d) => {
-    const items = d._path?.split('/')
-    return !(items?.at(-1) as string).startsWith('_')
+    const items = d.path?.split('/')
+    return !(items?.at(-1) as string).startsWith('.')
   })) {
-    const documentPath = doc._path?.split('/')
+    const documentPath = doc.path?.split('/')
     const isProject = documentPath?.includes('projects')
 
     sitemap.write({
       url: documentPath?.join('/'),
       changefreq: 'monthly',
       lastmod: new Date(),
-      priority: isProject ? 0.3 : 0.7
+      priority: isProject ? 0.3 : 0.7,
     })
   }
   sitemap.end()

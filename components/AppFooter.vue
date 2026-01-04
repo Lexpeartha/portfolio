@@ -6,7 +6,7 @@
         GPL-2.0 license
       </a>
       <br />
-      Copyright © 2022-present Aleksa Sević 
+      Copyright © 2022-present Aleksa Sević
     </p>
   </footer>
 </template>

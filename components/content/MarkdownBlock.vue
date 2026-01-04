@@ -1,4 +1,4 @@
 <!-- This component is used to show Markdown code block examples -->
 <template>
-  <pre class="overflow-x-auto"><ContentSlot :use="$slots.default" unwrap="p" /></pre>
+  <pre class="overflow-x-auto"><slot mdc-unwrap="p" /></pre>
 </template>

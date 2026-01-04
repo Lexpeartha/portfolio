@@ -3,16 +3,24 @@ const props = defineProps<{
   slug: string
 }>()
 
-const { data } = await useAsyncData(`project-${props.slug}`, () => queryContent('/projects').where({
-  slug: { $eq: props.slug }
-}).find())
+const { data } = await useAsyncData(`project-${props.slug}`, () =>
+  queryCollection('projects').where('slug', '=', props.slug).first(),
+)
+
+if (!data.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Project not found',
+    fatal: false,
+  })
+}
 
 const { extractProjectFromContent } = useProjectUtils()
 
-const project = extractProjectFromContent(data.value[0])
+const project = extractProjectFromContent(data.value ?? null)
 
 useHead({
-  title: project?.title || 'Work project'
+  title: project?.title || 'Work project',
 })
 </script>
 
@@ -27,14 +35,14 @@ useHead({
           </NuxtLink>
         </div>
         <p>
-          Created: <i>{{ project?.creationDate.toLocaleDateString('en-UK', {
+          Created: <i>{{ project?.creationDate?.toLocaleDateString('en-UK', {
             year: 'numeric',
             month: '2-digit',
-            day: '2-digit'
+            day: '2-digit',
           }) }}</i>
         </p>
       </div>
-      <ContentRenderer :value="data[0]" />
+      <ContentRenderer :value="data as Record<string, any>" />
       <hr>
       <p>
         Finished reading? <NuxtLink to="/work">
@@ -42,10 +50,5 @@ useHead({
         </NuxtLink>
       </p>
     </article>
-
-    <DocumentDrivenNotFound v-else>
-      Project you were looking for
-      <span class="highlight">wasn't found</span>
-    </DocumentDrivenNotFound>
   </div>
 </template>
