@@ -11,5 +11,6 @@
 #   <___________>
 
 User-agent: *
-Sitemap: https://pagedart.com/sitemap.xml
 Disallow: /files/
+
+Sitemap: https://lexpeartha.com/sitemap.xml

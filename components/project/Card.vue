@@ -29,6 +29,6 @@ defineProps<{
 
 <style lang="scss" scoped>
 .clip {
-  clip-path: polygon(65% 0, 100% 0, 100% 100%, 30% 100%);
+	clip-path: polygon(65% 0, 100% 0, 100% 100%, 30% 100%);
 }
 </style>
