@@ -11,7 +11,7 @@ const slug = typeof params.slug === 'string' ? params.slug : params.slug[0]
   <NuxtLayout>
     <ProjectMarkdown
       :slug="slug"
-      collection="projects"
+      collection="archive"
     />
   </NuxtLayout>
 </template>

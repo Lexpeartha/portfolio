@@ -11,7 +11,7 @@ description: >
 
 # [Pixpuzz]{.highlight} - [pix]{.highlight}el [puzz]{.highlight}le game
 
-Game made in my spare to time to learn, practice and have fun with Godot Engine and C#. It's a simple puzzle game, where you have to reach the portal by moving blocks around.
+A pixel-art puzzle game made in my spare time to learn Godot Engine and practice C#. Developed over one week with additional polish applied over the following months, this completed project features 5 levels where you must reach the portal by strategically moving blocks around.
 
 <iframe class="h-[320px] sm:h-[380px] lg:h-[540px]" src="https://itch.io/embed-upload/6789138?color=315e83" allowfullscreen width="100%" frameborder="0"><a href="https://lexpeartha.itch.io/pixpuzz">Play Pixpuzz on itch.io</a></iframe>
 
@@ -25,11 +25,11 @@ Game made in my spare to time to learn, practice and have fun with Godot Engine 
 
 ## Description & details
 
-Game was made with [Godot]{.highlight} and [C#]{.highlight}, and published on Itch.io. It's a simple puzzle game I used as an opportunity to dive into Godot Engine and design some puzzles. Every sprite was created in [Aseprite]{.highlight}.
+This learning project was built with [Godot]{.highlight} and [C#]{.highlight}, and published on Itch.io. As my first complete game project, it served as an opportunity to dive into Godot Engine, practice OOP principles, design engaging puzzles and game mechanics. Every sprite was hand-crafted in [Aseprite]{.highlight}.
 
 Game is partially inspired by puzzles from games such as `'Portal 2'`, `'The Witness'` and `'Baba Is You'`.
 
-It was really fun working on the project, especially when I got the hang of how Godot works with C#. Using inheritance and interfaces to create reusable scripts was surprisingly effective and fun for a game. For example, to illustrate a principle, I had the following code in my top level class `Level.cs` (following code is simplified by a notch):
+Working on this project was an exciting learning experience, especially discovering how Godot works with C#. Using inheritance and interfaces to create reusable scripts proved surprisingly effective for game development. For example, I implemented the [Template Method pattern]{.highlight} in my base level system, design pattern where a base class defines the structure while subclasses customize specific steps. Here's a simplified version from `Level.cs`:
 
 ```csharp
 using Godot;
@@ -37,29 +37,31 @@ using System;
 
 public class Level : Node2D
 {
+  public override void _Ready()
+  {
+    // Setup the level here, by connecting signals from corresponding buttons,
+    // doors, connecting audio manager and etc.
+    
+    OnLevelReady();
+  }
 
-    public override void _Ready()
-    {
-        // Setup the level, by connecting signals from corresponding buttons and doors,
-        // connecting audio manager and etc.
-
-        OnLevelReady();
-    }
-
-    public virtual void OnLevelReady() { }
+  // Add level-specific logic on this method
+  public virtual void OnLevelReady() { }
 }
 ```
 
-This use for inheritance was pretty neat, since I could create as many levels as I wanted, and each level could have its own logic, but still use the same base class with core functionality that makes the game work, and to customize it I just needed to override `OnLevelReady` method. I also used the same base class for other things, such as buttons, doors, etc.
+This inheritance pattern proved highly effective. I could create multiple levels with unique logic while maintaining shared core functionality. Customization was as simple as overriding the `OnLevelReady` method. I applied this same architectural approach to other game elements like buttons, doors, and interactive objects.
 
 ![Screenshot from my game](/images/projects/pixpuzz.png){.highlight-image}
 
-## Solved problems
+## Key learning achievements
 
 ::list
-- Use OOP principles to create reusable scripts for the game nodes
-- Create a simple level editor along with tool scripts to make level design a breeze
-- Use Godot's built-in systems to manage audio, scene transitions and etc.
+- Applied OOP principles and design patterns (Template Method, inheritance, interfaces) to create reusable, maintainable scripts for game nodes
+- Built a custom level editor with tool scripts that streamlined the design process
+- Leveraged Godot's built-in systems for audio management, scene transitions, and game state
+- Completed full game development cycle from concept to published game in one week
+- Designed and implemented 5 unique puzzle levels (8 in total)
 ::
 
 ## Project links

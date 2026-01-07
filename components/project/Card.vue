@@ -1,13 +1,16 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   project: Project
+  basePath?: string
 }>()
+
+const linkPath = props.basePath || '/project'
 </script>
 
 <template>
   <NuxtLink
     class="group max-h-[140px] sm:max-h-[120px] bg-white hover:bg-secondary-100 hover:border-secondary-100 dark:bg-primary-800 dark:hover:bg-secondary-900 dark:hover:border-secondary-900 relative rounded-lg no-underline border-2 border-primary-200 dark:border-primary-700 duration-[400ms] overflow-hidden"
-    :to="`/project/${project.slug}`"
+    :to="`${linkPath}/${project.slug}`"
   >
     <img
       class="clip absolute transition-all my-0 top-0 left-0 object-cover group-hover:scale-110"

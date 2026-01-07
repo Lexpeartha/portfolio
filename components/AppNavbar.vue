@@ -4,8 +4,8 @@ const { data: navData } = await useAsyncData('navigation', () =>
 )
 
 // Filter out items where page is false or navigation should be hidden
-const navigation = computed(() =>
-  navData.value?.filter(item => item.page !== false) || [],
+const navigation = computed(
+  () => navData.value?.filter(item => item.page !== false) || [],
 )
 
 const appConfig = useAppConfig()
