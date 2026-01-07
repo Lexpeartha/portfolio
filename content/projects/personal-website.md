@@ -38,7 +38,6 @@ Styling is implemented primarily with TailwindCSS, including prose typography fr
 - Created custom interactive Vue components that work seamlessly within markdown (pronunciation button, tooltips, dynamic lists)
 - Configured automated static generation and edge deployment for optimal performance
 - Designed accessible, responsive UI with semantic HTML and proper ARIA attributes
-- Built a maintainable architecture where content updates require zero rebuilds in development
 ::
 
 ## Project links
