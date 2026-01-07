@@ -17,6 +17,18 @@ export default defineNuxtConfig({
           type: 'image/x-icon',
           href: '/favicon.ico',
         },
+        {
+          rel: 'preload',
+          as: 'image',
+          href: '/images/pattern-light.svg',
+          type: 'image/svg+xml',
+        },
+        {
+          rel: 'preload',
+          as: 'image',
+          href: '/images/pattern-dark.svg',
+          type: 'image/svg+xml',
+        },
       ],
     },
   },
@@ -47,8 +59,14 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
+  features: {
+    inlineStyles: true,
+  },
+
   experimental: {
     writeEarlyHints: true,
+    payloadExtraction: true,
+    renderJsonPayloads: true,
   },
 
   compatibilityDate: '2026-01-01',
@@ -58,6 +76,7 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/', '/work', '/archived', '/404.html', '/sitemap.xml'],
     },
+    compressPublicAssets: true,
   },
 
   vite: {
@@ -67,6 +86,7 @@ export default defineNuxtConfig({
           silenceDeprecations: ['legacy-js-api'],
         },
       },
+      preprocessorMaxWorkers: true,
     },
   },
 

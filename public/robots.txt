@@ -1,15 +1,3 @@
-#   Beep boop, welcome to robots.txt file!
-#         _
-#        [ ]
-#       (o o)
-#        |>|
-#    ___/===\___
-#   //| o--o |\\
-# <]  | o--o |  [>
-#    \========/
-#   / / / | \ \ \
-#   <___________>
-
 User-agent: *
 Disallow: /files/
 
