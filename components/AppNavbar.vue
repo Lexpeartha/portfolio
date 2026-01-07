@@ -8,7 +8,7 @@ const navigation = computed(() =>
   navData.value?.filter(item => item.page !== false) || [],
 )
 
-const appConfig = useAppConfig();
+const appConfig = useAppConfig()
 </script>
 
 <template>
