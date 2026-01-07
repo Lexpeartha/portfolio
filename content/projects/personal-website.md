@@ -1,43 +1,44 @@
 ---
-slug: personal-website
-image: /images/projects/personal-website.png
-title: My personal website
+slug: portfolio-website
+image: /images/projects/portfolio-website.png
+title: Portfolio website
 creationDate: 2022-09-01
 category: website
 type: personal
 description: >
-  Website made with Nuxt content module in document driven mode, utilizing markdown files for generating pages, and TailwindCSS for styling.
+  Modern, performant portfolio website built with Nuxt 4 and Vue 3, featuring content-driven architecture with markdown-based pages, custom interactive Vue components, and static deployment for optimal performance.
 ---
 
-# [Personal website]{.highlight}
+# [Portfolio website]{.highlight}
 
-The very website you're on! I've made it to showcase my projects and skills, and to have my very own corner of the internet.
+The very website you're viewing! This portfolio showcases my professional work and technical knowledge with a touch of personality and authenticity. Built as a modern, performant web application featuring a content-driven architecture with git-based [CMS]{title="Content Management System"}, custom interactive Vue components embedded in markdown, and static deployment for optimal performance.
 
 ## Technologies used
 
 ::list{icon="ion:arrow-right-c"}
 - Vue 3
 - VueUse
-- Nuxt 3 with `@nuxt/content` and `@nuxtjs/tailwindcss`
+- Nuxt 4 with `@nuxt/content` and `@nuxtjs/tailwindcss`
 ::
 
 ## Description & details
 
-![Screenshot of my personal website](/images/projects/personal-website.png){.highlight-image}
+![Screenshot of my portfolio website](/images/projects/portfolio-website.png){.highlight-image}
 
-Website is created with Vue 3 and Nuxt 3 for SSR, deployed on the edge. It was made from [Content-Wind](https://content-wind.nuxt.dev/){target="_blank"} project template, but was heavily modified to suit my needs.
+Built with Vue 3 and Nuxt 4 leveraging [SSG]{title="Static Site Generation"}. The project started from the [Content-Wind](https://content-wind.nuxt.dev/){target="_blank"} template but since then it evolved into a heavily customized solution tailored to my specific needs.
 
-Website uses Nuxt content module with document driven mode, utilizing markdown files for generating pages, instead of usual Vue files.
+The architecture utilizes Nuxt Content's capabilities, where markdown files serve as the primary content source instead of traditional Vue [SFC]{title="Single File Components"}s. This approach enables version-controlled content with the simplicity of markdown while maintaining the power of Vue components through custom [MDC]{title="Markdown Components"} syntax.
 
-Everything was styled and customized using TailwindCSS, including typography generated from MD with `@tailwindcss/typography` plugin. Exceptions are minor details and utilities that were added to make the website look better, which are written in SCSS.
+Styling is implemented primarily with TailwindCSS, including prose typography from the `@tailwindcss/typography` plugin for rendered markdown content. Additional utilities and fine-tuned details are written in SCSS for cases requiring more specific control beyond Tailwind's utility classes.
 
-## Solved problems
+## Technical achievements
 
 ::list
-- Integrating git based CMS (which in this case were MD files) with nuxt to create content-driven pages
-- Making interactive pages in markdown files with Vue component
-- Using `@nuxt/content` with document-driven (DD) mode
-- Creating simple, sleek and content-driven website
+- Implemented git-based content management using markdown files with Nuxt Content
+- Created custom interactive Vue components that work seamlessly within markdown (pronunciation button, tooltips, dynamic lists)
+- Configured automated static generation and edge deployment for optimal performance
+- Designed accessible, responsive UI with semantic HTML and proper ARIA attributes
+- Built a maintainable architecture where content updates require zero rebuilds in development
 ::
 
 ## Project links

@@ -66,13 +66,14 @@ $opacity-light: 4%;
 		}
 	}
 
+	[title] {
+		@apply underline decoration-dotted decoration-primary-500 cursor-help;
+	}
+
 	.highlight {
 		@apply text-secondary-700 dark:text-secondary-500;
 	}
 
-	.tooltip {
-		@apply underline decoration-dotted decoration-primary-500 cursor-help;
-	}
 
 	/* Fix certain iconify icons in markdown being slightly misaligned */
 	.iconify:not(a > .iconify):not(a + .iconify):not(:has(+ a)) {
