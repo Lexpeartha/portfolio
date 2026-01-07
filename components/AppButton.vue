@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<{
   type: 'regular',
   isLink: false,
   to: '',
-  icon: null,
+  icon: undefined,
   iconClasses: '',
 })
 
@@ -27,7 +27,7 @@ const styleClasses = props.type === 'regular'
     :is="isLink ? NuxtLink : 'button'"
     :to="to"
     v-bind="$attrs"
-    class="flex items-center justify-center no-underline text-center inline-block rounded-lg transition-colors duration-200 ease-out"
+    class="flex items-center justify-center no-underline text-center rounded-lg transition-colors duration-200 ease-out"
     :class="styleClasses"
   >
     <slot />

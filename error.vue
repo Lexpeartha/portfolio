@@ -7,8 +7,6 @@ const props = defineProps({
 
 const appConfig = useAppConfig()
 
-const handleError = () => clearError({ redirect: '/' })
-
 const is404 = computed(() => props.error?.statusCode === 404)
 
 useHead({
@@ -49,7 +47,8 @@ useHead({
         </p>
         <AppButton
           type="cta"
-          @click="handleError"
+          is-link
+          to="/"
         >
           Go to the homepage
         </AppButton>
@@ -69,7 +68,8 @@ useHead({
         </p>
         <AppButton
           type="cta"
-          @click="handleError"
+          is-link
+          to="/"
         >
           Go to the homepage
         </AppButton>
