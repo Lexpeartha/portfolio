@@ -1,6 +1,7 @@
 node_modules
 *.log*
 .nuxt
+.data # SQLite database and other cache, generated for content by @nuxt/content
 .vercel
 .nitro
 .cache
