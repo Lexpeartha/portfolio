@@ -46,6 +46,10 @@ $opacity-light: 4%;
 }
 
 /*-- GLOBAL STYLES --*/
+html {
+	@apply scroll-smooth;
+}
+
 .prose {
 	a:not(h1 a):not(h2 a) {
 		@apply text-secondary-900 decoration-secondary-900 dark:text-secondary-100 dark:decoration-secondary-100;
