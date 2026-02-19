@@ -12,7 +12,7 @@ const onClick = () => (colorMode.value === 'light'
       class="text-primary-800 dark:text-white"
       @click="onClick"
     >
-      <ColorScheme placeholder="O">
+      <ColorScheme placeholder="☀️">
         <Transition
           mode="out-in"
           name="scale"
