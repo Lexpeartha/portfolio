@@ -17,8 +17,8 @@ const linkPath = props.basePath || '/project'
       :alt="project.title"
       :src="project.image"
     />
-    <div class="relative py-1 px-4 w-4/5 sm:w-3/5 h-full">
-      <h3 class="transition-all my-5 text-base highlight">
+    <div class="relative flex flex-col justify-center gap-1 px-4 pt-4 w-4/5 sm:w-3/5 h-full">
+      <h3 class="transition-all my-1 text-base highlight">
         {{ project.title }}
       </h3>
       <p
