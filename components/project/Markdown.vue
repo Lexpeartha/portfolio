@@ -23,8 +23,11 @@ const project = extractProjectFromContent(data.value ?? null)
 // Check if this is an archived project
 const isArchived = collection === 'archive'
 
-useHead({
+usePortfolioSeo({
   title: project?.title || 'Work project',
+  description: project?.description,
+  image: project?.image,
+  type: 'article',
 })
 </script>
 

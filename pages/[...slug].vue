@@ -12,8 +12,11 @@ if (!page.value) {
   })
 }
 
-useHead({
-  title: page.value?.meta?.head?.title || page.value?.title || 'Page',
+const head = page.value?.meta?.head as any
+usePortfolioSeo({
+  title: head?.title || page.value?.title || 'Page',
+  description: head?.description,
+  image: String(page.value.meta?.image) ?? undefined,
 })
 </script>
 

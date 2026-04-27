@@ -1,4 +1,10 @@
 export default defineAppConfig({
+  seo: {
+    siteUrl: 'https://www.lexpeartha.com',
+    defaultImage: '/images/projects/portfolio-website.png',
+    defaultDescription:
+      'Portfolio of Aleksa, a software engineer specializing in full-stack development, AI/LLMs, and modern web technologies.',
+  },
   mailto: 'mailto:contact@lexpeartha.com',
   socials: {
     x: 'lexpeartha',
