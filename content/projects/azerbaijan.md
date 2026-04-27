@@ -34,7 +34,7 @@ What made these projects particularly exciting was implementing the [A2A]{title=
 
 ### Azerfit
 
-This is where things get interesting. Azerfit is an agent-powered app that works with pupil data through a [conversational AI interface]{.highlight} that understands what users need in plain language. Under the hood, the agent connects to an [MCP]{title="Model Context Protocol"} server to handle requests ranging from fetching student records, comparing them on school or regional level, to generating PDF reports.
+Azerfit is an agent-powered app that works with pupil data through a [conversational AI interface]{.highlight} that understands what users need in plain language. Under the hood, the agent connects to an [MCP]{title="Model Context Protocol"} server to handle requests ranging from fetching student records, comparing them on school or regional level, to generating PDF reports.
 
 It's all built on a [RAG]{title="Retrieval-Augmented Generation"} workflow grounded by data from the graph database — so the agent's answers are always backed by real records and hallucinations are minimal.
 
@@ -48,7 +48,7 @@ The app also provides a convenient form for entering students, making the old pa
 
 ### Athlete Registrations
 
-The less flashy sibling, but equally important. This app handles athlete registration for the Ministry, giving them a streamlined way to record and track athletes across sports disciplines. The agent can fetch and answer pretty much any question about registered athletes: from counting how many there are in a certain region to ranking them by the number of competition achievements.
+The less flashy sibling, but equally important. Athlete Registrations app handles athlete registration for the Ministry, giving them a streamlined way to record and track athletes across sports disciplines. The agent can fetch and answer pretty much any question about registered athletes: from counting how many there are in a certain region to ranking them by the number of competition achievements.
 
 ![Athletes Registration agent querying based on a question](/images/projects/azerbaijan/athletes-query.png){.highlight-image}
 
